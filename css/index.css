@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hovedstiler - Endringer på de basic stilene i dokumentet */
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+em {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 18, 109);
+    padding: 5px;
+    border-radius: 2px;
+}
+
+/* Header - CSS kode som tilhører navbaren */
+
+header {
+    height: 60px;
+    padding: 0px 50px 0px 50px;
+    background: rgb(16,86,255);
+    background: linear-gradient(85deg, rgb(16, 88, 255) 0%, rgb(128, 0, 255) 100%);
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    box-shadow: 0px -1px 14px 0px rgb(0, 22, 54);
+}
+
+.kontakt-oss {
+    padding: 30px 0px 30px 0px;
+    width: 120px;
+    border: 1px solid white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: "Roboto slab", serifs;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.kontakt-oss:hover {
+    background-color: rgb(0, 24, 80, 0.5);
+    border-color: rgba(240, 248, 255, 0);
+    -webkit-transition: all 0.2s;
+}
+
+.kontakt-oss:focus {
+    background-color: rgba(0, 24, 80, 0.5);
+    border-color: rgba(240, 248, 255, 0);
+    -webkit-transition: all 0.2s;
+}
+
+.om-oss {
+    padding: 30px 0px 30px 0px;
+    margin-left: 10px;
+    width: 100px;
+    border: 1px solid white;
+    border-right: 0px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.om-oss:hover {
+    background-color: rgb(0, 24, 80, 0.5);
+    border-color: rgba(240, 248, 255, 0);
+    -webkit-transition: all 0.2s;
+}
+
+.om-oss:focus {
+    background-color: rgb(0, 24, 80, 0.5);
+    border-color: rgba(240, 248, 255, 0);
+    -webkit-transition: all 0.2s;
+}
+
+/* Hero - CSS kode som tilhører hero seksjonen */
+
+.hero-seksjon {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    background-image: url("../Bilder/Bakgrunn.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-container{
+    display: flex;
+    height: 100%;
+    width: 500px;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(13, 0, 197, 0.699);
+    overflow: hidden;
+    animation: hero-animasjon;
+    animation-duration: 0.75s;
+}
+
+@keyframes hero-animasjon {
+    0%   {width: 0px; }
+    100% {width: 500px;}
+}
+
+.tekstboks {
+    width: 90%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    animation: fade;
+    animation-duration: 1s;
+}
+
+.tekstboks h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.tekstboks p {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: white;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+.strek {
+    width: 40px;
+    border-bottom: 3px solid rgb(255, 18, 109);
+    margin-bottom: 20px;
+}
+
+/* Prosjekter - CSS kode som tilhører prosjekt seksjonen */
+
+.prosjekter-seksjon {
+    display: flex;
+    min-height: 600px;
+    padding: 50px 0px 50px 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(239, 235, 255);
+}
+
+.prosjekt-container {
+    width: 75%;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .content-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .flexgrid-box {
+        margin-bottom: 50px;
+    }
+
+    .prosjekt-container {
+        width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .flexgrid-box {
+        margin-bottom: 50px;
+    }
+
+    .prosjekt-container {
+        width: 80%;
+    }
+  }
+
+.flexgrid-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 10px 10px 10px 0px rgba(10,26,199,0.20);
+    border-radius: 10px;
+}
+
+.flexgrid-box p {
+    margin-bottom: 20px;
+}
+
+.bilderamme {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+.bilderamme img {
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.grid-knapp {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    margin-top: auto;
+    background-color: rgb(16,86,255);
+    border-radius: 5px;
+    max-width: 80px;
+    text-align: center;
+    align-self: center;
+}
