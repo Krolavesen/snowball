@@ -173,9 +173,9 @@ footer {
 }
 
 @keyframes hero-animasjon {
-    0%   {width: 0px; }
-    50% {width: 0px;}
-    100% {width: 500px;}
+    0%   {width: 0%; min-width: 0px;}
+    50% {width: 0%;}
+    100% {width: 40%;}
 }
 
 .tekstboks {
