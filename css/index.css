@@ -29,19 +29,17 @@ h2 {
 h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
 }
 
 em {
     font-weight: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 18, 109);
     padding: 5px;
     border-radius: 2px;
 }
@@ -157,6 +155,7 @@ footer {
     background-image: url("../Bilder/Bakgrunn.jpg");
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .hero-container{
@@ -170,6 +169,13 @@ footer {
     overflow: hidden;
     animation: hero-animasjon;
     animation-duration: 1s;
+}
+
+@media only screen and (max-width: 600) {
+    .hero-container {
+        min-width: auto;
+        width: 100%;
+    }
 }
 
 @keyframes hero-animasjon {
@@ -194,7 +200,7 @@ footer {
 }
 
 .tekstboks p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     color: white;
 }
@@ -308,8 +314,9 @@ footer {
     text-align: center;
 }
 
-.grid-knapp:hover {
-    background-color: rgb(132, 161, 255);
+.grid-knapp:hover, .grid-knapp:focus {
+    background-color: rgb(190, 205, 255);
+    color: rgb(19, 0, 65);
     transition: 0.2s;
 }
 
@@ -366,4 +373,13 @@ footer {
     color: white;
 }
 
+@media only screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
 
