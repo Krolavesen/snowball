@@ -152,8 +152,8 @@ footer {
     display: flex;
     align-items: center;
     height: 70vh;
-    background-image: url("../Bilder/Bakgrunn.jpg");
-    background-position: center;
+    background-image: url("../Bilder/Charity.jpg");
+    background-position: top;
     background-size: cover;
     overflow: hidden;
 }
@@ -297,7 +297,7 @@ footer {
 .bilderamme img {
     object-fit: cover;
     width: 100%;
-    object-position: center;
+    object-position: top;
     margin-bottom: 15px;
 }
 
